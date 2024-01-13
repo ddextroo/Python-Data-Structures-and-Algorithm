@@ -103,7 +103,8 @@ class Linkedlist:
         current = self.head
         
         while current:
-            print("<-",current.prev.data if current.prev is not None else None, "|", current.data, "|", current.next.data if current.next is not None else None, end=" -> \n")
+            # print("<-",current.prev.data if current.prev is not None else None, "|", current.data, "|", current.next.data if current.next is not None else None, end=" -> \n")
+            print(current.data, end="->")
             current = current.next
             
     def reverse(self):
@@ -173,6 +174,15 @@ class Linkedlist:
             current = current.next
     def clear(self):
         self.head = None
+    
+    def display_reverse(self):
+        current = self.head
+        
+        while current.next:
+            current = current.next
+        while current:
+            print(current.data, end="->")
+            current = current.prev
 d = Linkedlist()
 d.prepend(10)
 d.append(12)
@@ -232,6 +242,12 @@ d.traverse()
 print()
 print(d.get_min())
 
+print()
+print()
+print()
+print()
+print()
+d.display_reverse()
 
 
 # d3 = Linkedlist()

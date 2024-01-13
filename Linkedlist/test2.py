@@ -33,7 +33,7 @@ class Linkedlist:
             
     def count_duplicates(self):
         current = self.head
-        count = -1
+        count = 0
 
         while current:
             current2 = current.next
