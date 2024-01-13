@@ -70,3 +70,4 @@ print()
 s1.push(3)
 s1.push(5)
 s1.display()
+#eyy
