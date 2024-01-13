@@ -37,24 +37,36 @@ class Linkedlist:
 
         while current:
             current2 = current.next
+            temp_count = 0
             while current2:
                 if current.data == current2.data:
-                    count += 1
+                    temp_count += 1
+                    if temp_count < 2:
+                        count += 1
                     current2.prev.next = current2.next
                     if current2.next:
                         current2.next.prev = current2.prev
                 current2 = current2.next
-
             current = current.next
-
         return count
 
 
-
     def insert_duplicates(self, l):
-        current = self.head
-        current2 = self.head
-        ll = l.head
+        current = l.head
+        count = 0
+        while current:
+            current2 = current.next
+            temp_count = 0
+            while current2:
+                if current.data == current2.data:
+                    temp_count += 1
+                    if temp_count < 2:
+                        count += 1
+                    current2.prev.next = current2.next
+                    if current2.next:
+                        current2.next.prev = current2.prev
+                current2 = current2.next
+            current = current.next
         
         
                 
@@ -62,6 +74,7 @@ d = Linkedlist()
 d.insert_beginning(2)
 d.insert_beginning(1)
 d.insert_beginning(7)
+d.insert_beginning(10)
 d.insert_beginning(10)
 d.insert_beginning(10)
 d.insert_beginning(9)
@@ -73,10 +86,6 @@ d.display()
 print()
 print(d.count_duplicates())
 print()
-# d.display_reverse()
-print()
-
 d2 = Linkedlist()
-# d2.insert_duplicates(d)
+d2.insert_duplicates(d)
 d2.display()
-d.display()
