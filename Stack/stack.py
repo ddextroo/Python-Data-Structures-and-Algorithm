@@ -25,7 +25,7 @@ class stack:
             self.top = self.top.next
 
         return removed
-
+#fgf
     def peek(self):
         return self.top.data if self.top else None
 
