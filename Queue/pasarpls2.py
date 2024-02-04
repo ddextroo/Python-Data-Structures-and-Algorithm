@@ -51,17 +51,6 @@ class Task:
     def change_task(self, task_name, new_priority):
         current = self.front
         
-        current2 = self.front
-        
-        # while current2.next:
-        #     if current2.task_name == task_name:
-        #         break
-        #     current2 = current2.next
-        # else:
-        #     print( "wala na")
-        #     return
-        
-        
         if self.front.task_name == task_name:
             self.front = self.front.next
             self.add_task(task_name, new_priority)
