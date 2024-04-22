@@ -1,4 +1,4 @@
-#stack4
+#stack466
 
 class Node:
     def __init__(self, data) -> None:
