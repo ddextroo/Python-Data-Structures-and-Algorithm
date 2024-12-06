@@ -1,4 +1,4 @@
-#qstack7hwqksd
+#qstack7h
 class Node:
     def __init__(self, data) -> None:
         self.data = data
